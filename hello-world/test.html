@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <body>
+      <div id="root"></div>
+      <script src="./react.development.js"></script>
+      <script src="./react-dom.development.js"></script>
+      <script type="text/javascript">
+        console.log("it's working");
+        const mountElement = document.getElementById("root");
+
+        //SFC Stateless Function Component
+        const MyComponent = () => React.createElement("h3", null, "Hello!2x"); //lambda functions
+        //class
+        class MySecondComponent extends React.Component {
+          render() {
+            return React.createElement(MyComponent);
+          }
+        }
+
+        ReactDOM.render(React.createElement(MySecondComponent), mountElement);
+      </script>
+    </body>
+  </head>
+</html>
